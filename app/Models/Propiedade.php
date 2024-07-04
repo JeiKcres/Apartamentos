@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Propiedade extends Model
 {
     use HasFactory;
-
     
+    public $timestamps = false;
+
 }

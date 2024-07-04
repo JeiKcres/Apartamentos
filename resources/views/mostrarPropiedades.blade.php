@@ -41,6 +41,8 @@
                 <td>{{ $propiedad->color }}</td>
                 <td>{{ $propiedad->idDuenio }}</td>
                 <td>{{ $propiedad->estado}}</td>
+                <td><a href = {{route ('propiedade.editar', $propiedad->id)}}>EDITAR</a>
+                </td>
                 
             </tr>
             @endforeach

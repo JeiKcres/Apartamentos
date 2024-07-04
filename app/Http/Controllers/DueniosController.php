@@ -25,4 +25,22 @@ class DueniosController extends Controller
 
         return redirect('/duenios/mostrar');
     }
+
+    public function editarDuenio($id){
+
+        $duenioEditar = Duenio::find($id);
+        return view('editarDuenio', compact('duenioEditar'));
+
+    }
+
+    public function guardarDuenioEditado(Request $request, $id){
+        $duenioEditado = Duenio::find($id);
+        $duenioEditado->nombre = $request->nombre;
+        $duenioEditado->apellido = $request->apellido;
+        $duenioEditado->correo = $request->correo;
+        $duenioEditado->save();
+
+        return redirect('/duenios/mostrar');
+    }
+
 }
